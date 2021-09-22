@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Узнать цену машины</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+    <main class="container">
+        <header class="header">
+            <h1>Калькулятор стоимости авто </h1>
+        </header>
+        <form class="cars-form">
+            <div class="form-item">
+                <p>Цена при покупке, $</p>
+                <input type="number" id="oldPrice">
+            </div>
+
+            <div class="form-item">
+                <p>Год выпуска</p>
+                <input type="number" id="yearOfBirth">
+            </div>
+
+            <div class="form-item">
+                <p>Марка авто</p>
+                <select name="labels" id="labels-select">
+                    <option value="" disabled>Выберите марку</option>
+                    <option value="honda">Honda</option>
+                    <option value="mazda">Mazda</option>
+                    <option value="toyota">Toyota</option>
+                    <option value="infiniti">Infiniti</option>
+                    <option value="acura">Acura</option>
+                    <option value="lada">Лада-калина</option>
+                </select>
+            </div>
+
+            <div class="form-item">
+                <p>Тип топлива</p>
+                <div class="fuel-item">
+                    <input type="radio" name="fuel" value="petrol" id="petrol">
+                    <label for="petrol">бензин</label>
+                </div>
+
+                <div class="fuel-item">
+                    <input type="radio" name="fuel" value="diezel" id="diezel">
+                    <label for="diezel">дизельное топливо</label>
+                </div>
+
+                <div class="fuel-item">
+                    <input type="radio" name="fuel" value="electric" id="electric">
+                    <label for="electric">электрический</label>
+                </div>
+
+            </div>
+
+            <div class="form-item">
+                <p>Объем двигателя, см<sup>3</sup></p>
+                <input type="number" id="engineCapacity">
+            </div>
+
+            <div class="form-item">
+                <p>Мощность, л.с.</p>
+                <input type="number" id="enginePower">
+            </div>
+
+            <button class="getInfo" id="getInfo" type="button">Рассчитать</button>
+        </form>
+    </main>
+    <script src="./main.js"></script>
+</body>
+</html>

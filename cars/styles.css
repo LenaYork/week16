@@ -1,0 +1,46 @@
+.container {
+    width: 500px;
+    margin: 0 auto;
+    padding: 2px 5px;
+    border-radius: 25px;
+    background-color: #eb9898;
+}
+
+.header {
+    height: 50px;
+    border-radius: 25px;
+    background-color: red;
+}
+
+h1 {
+    color: white;
+    text-align: center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.form-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* align-items: center; */
+}
+
+input, button {
+    border-radius: 25px;
+}
+
+button {
+    margin: 10px auto 10px;
+    padding: 10px 15px;
+    border: 1px solid silver;
+    background-color: #e20808;
+}
+
+button:hover {
+    cursor: pointer;
+    background-color: #a70909;
+}
+
+button:active {
+    background-color: #ff2323;
+}
