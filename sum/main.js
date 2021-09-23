@@ -12,7 +12,8 @@ function sumInput() {
         } else alert("Вводить можно только цифры!");
     }while (userNum != null && userNum != undefined && !isNaN(userNum));
     //console.log("итого массив", userNumbers);
-    sortedNumbers = userNumbers.sort((a, b) => a -b );
+    let sortedNumbers = userNumbers.sort((a, b) => a -b );
+    sortedNumbers.shift();
     totalSum = userNumbers.reduce((a,b) => a + b, 0);
     alert(`Ваши цифры от меньшего к большему: ${sortedNumbers}`);
     alert(`Сумма всех ваших цифр: ${totalSum}`);
