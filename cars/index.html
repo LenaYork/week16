@@ -20,13 +20,22 @@
 
             <div class="form-item">
                 <p>Год выпуска</p>
-                <input type="number" id="yearOfBirth">
+                <select name="years" id="years-select">
+                    <option value="" disabled selected>Выберите год выпуска</option>
+                    <option value="2021">2021</option>
+                    <option value="2020">2020</option>
+                    <option value="2019">2019</option>
+                    <option value="2018">2015-2018</option>
+                    <option value="2010">2010-2015</option>
+                    <option value="2000">2000-2010</option>
+                    <option value="1990">до 2000</option>
+                </select>
             </div>
 
             <div class="form-item">
                 <p>Марка авто</p>
                 <select name="labels" id="labels-select">
-                    <option value="" disabled>Выберите марку</option>
+                    <option value="" disabled selected>Выберите марку</option>
                     <option value="honda">Honda</option>
                     <option value="mazda">Mazda</option>
                     <option value="toyota">Toyota</option>
@@ -57,16 +66,25 @@
 
             <div class="form-item">
                 <p>Объем двигателя, см<sup>3</sup></p>
-                <input type="number" id="engineCapacity">
+                <input type="number" id="engineCapacity" max="50">
+                <div id="errorC" class="errorMessage"></div>
             </div>
 
             <div class="form-item">
                 <p>Мощность, л.с.</p>
-                <input type="number" id="enginePower">
+                <input type="number" id="enginePower" max="300">
+                <div id="errorP" class="errorMessage"></div>
             </div>
 
-            <button class="getInfo" id="getInfo" type="button">Рассчитать</button>
+            <div class="confirmation">
+                <input type="checkbox" id="confirm">
+                <p>Я полностью доверяю вашим хитрым схемам подсчетов</p>
+            </div>
+
+            <button class="getInfo disabled" id="getInfo" type="button" disabled>Рассчитать</button>
         </form>
+        <div class="errors" id="errors"></div>
+        <div class="results" id="results"></div>
     </main>
     <script src="./main.js"></script>
 </body>
